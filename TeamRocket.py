@@ -7,6 +7,7 @@ from dateutil.relativedelta import relativedelta
 import datetime
 import os.path
 import requests
+import json
 from bs4 import BeautifulSoup
 BASE_URL = "http://www.espn.com"
 
@@ -20,6 +21,9 @@ def retry_request(url, headers={}):
 
 def get_soup(res):
     return BeautifulSoup(res.text, "lxml")
+def get_leagues():
+    """ Return a list of supported leagues """
+    return get_week_leagues()
 
 def get_new_json(url, headers={}):
     print(url)

@@ -5,8 +5,8 @@ cursor = conn.cursor()
 
 cursor.execute("CREATE TABLE IF NOT EXISTS teams(id INTEGER, teamsname TEXT,  wins INTEGER, losses INTEGER, scores INTEGER, description TEXT);")
 cursor.execute("INSERT INTO teams(id, teamsname, wins, losses, scores, description"
-               ") VALUES(0, 'seahawks', '5', '5', '55', 'Local DB');")
+               ") VALUES(0, 'loopback', '5', '5', '55', 'Local DB');")
 
-cursor.execute("SELECT * FROM TEAMS")
+
 results = cursor.fetchall()
 print ("Great Success")
